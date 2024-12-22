@@ -216,3 +216,60 @@ span {
         transform: scale(1.2);
     }
 }
+footer {
+    background-color: black;
+    height: 90vh;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+footer h3 {
+    padding: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 600px;
+}
+
+.footer-container label {
+    margin: 10px 0 5px;
+}
+
+footer input, 
+footer textarea {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.link i {
+    margin: 10px;
+    padding: 10px;
+    transform: scale(1);
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.link i:hover {
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}

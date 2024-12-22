@@ -1,0 +1,94 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3.5fr; /* Deux colonnes pour le texte, une grande pour l'image */
+    grid-template-rows: repeat(5, auto); /* 5 rangées avec hauteur automatique */
+    gap: 15px 30px; /* Espacement entre les éléments */
+    grid-template-areas:
+        "name name ."
+        "model model picture"
+        "price price picture"
+        "size size picture"
+        "button button .";
+    max-width: 900px;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    grid-area: name;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.model {
+    grid-area: model;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.price {
+    grid-area: price;
+    font-size: 1.2rem;
+    color: #f44336;
+    font-weight: bold;
+}
+
+.size {
+    grid-area: size;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size p {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.size p:hover {
+    background-color: #ddd;
+}
+
+.button {
+    grid-area: button;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture img {
+    width: 500px; /* Taille fixe de l'image */
+    height: auto; /* Respect des proportions */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
